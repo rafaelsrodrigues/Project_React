@@ -19,22 +19,31 @@ export const LogoContainer = styled.div`
   max-height: auto;
   align-self: center;
   margin-top: 5%;
+  @media screen and (max-width: 1024px) {
+    margin:0;
+  }
 `;
 
 export const LogoImg = styled.img`
   width: 306px;
   height: 70px;
-  margin: 35px auto 0 auto;
+  margin: 0;
   @media screen and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
   }
+  @media screen and (max-width: 325px){}
+    margin: 35px auto 0 auto;
+    width: 100%;
+    padding: 0;
+}
 `;
-
 
 export const ResultContainer = styled.div`
   color: #ffffff;
   width: 695px;
   height: 112px;
-  font-family: "Mark Pro";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -46,12 +55,20 @@ export const ResultContainer = styled.div`
   margin-top: 10%;
   @media screen and (max-width: 1024px) {
     max-width: 100%;
-    padding-left: 15%;
+    margin-bottom: 5%;
+    padding:0;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 500px) {
     max-width: 100%;
-    padding-left: 20%;
-    margin-bottom: 15px;
+    margin-bottom: 15%;
+  }
+  @media screen and (max-width: 380px){
+    max-width: 100%;
+    margin-bottom: 15%;
+    width: 481px;
+    height: 84px;
+    font-size: 34px;
+    line-height: 42px;
   }
 `;
 
@@ -66,6 +83,7 @@ export const InputContainer = styled.div`
     max-width: 80%;
   }
 `;
+
 export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
@@ -76,7 +94,7 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonSearchStyle = styled.button`
-  width: 60%;
+  min-width: 100%;
   height: 70px;
   outline: none;
   border: none;
@@ -85,7 +103,7 @@ export const ButtonSearchStyle = styled.button`
   border: linear-gradient(132.34deg, #ff2d04 22.57%, #c13216 72.04%);
   border-radius: 50px;
   color: white;
-  font-family: "Mark Pro";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 2.25em;
@@ -93,13 +111,19 @@ export const ButtonSearchStyle = styled.button`
   cursor: pointer;
   margin: 20px 0;
   @media screen and (max-width: 1024px) {
-    height: 40px;
+    height: 50px;
+    width: 379px;
     font-size: 1.5em;
   }
+  @media screen and (max-width: 400px){
+    height: 40px;
+    width: 200px;
+    font-size: 1.5em;
+}
 `;
 
 export const ButtonExitStyle = styled.button`
-  width: 60%;
+  min-width: 100%;
   height: 70px;
   outline: none;
   border: none;
@@ -107,7 +131,7 @@ export const ButtonExitStyle = styled.button`
   border: linear-gradient(132.34deg, #ff2d04 22.57%, #c13216 72.04%);
   border-radius: 50px;
   color: #000;
-  font-family: "Mark Pro";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 2.25em;
@@ -115,9 +139,15 @@ export const ButtonExitStyle = styled.button`
   cursor: pointer;
   margin-bottom: 20px;
   @media screen and (max-width: 1024px) {
-    height: 40px;
+    height: 50px;
+    width: 379px;
     font-size: 1.5em;
   }
+  @media screen and (max-width: 400px){
+    height: 40px;
+    width: 200px;
+    font-size: 1.5em;
+}
 `;
 
 export const SearchInputContainer = styled.div`
@@ -130,7 +160,7 @@ export const SearchInputContainer = styled.div`
 export const SearchInput = styled.input`
   margin: 0 15%;
   padding: 20px;
-  width: 24vw;
+  min-width: 24vw;
   height: 45px;
   background: transparent;
   border-radius: 50px;
@@ -160,24 +190,28 @@ export const SearchInput = styled.input`
     margin-left: 20px;
   }
 `;
+
 export const SearchInputIcon = styled.img`
   position: relative;
-  right: 77%;
+  right: 91%;
   width: 20px;
   height: 20px;
   @media screen and (max-width: 1552px) {
-    right: 74%;
+    right: 90%;
   }
   @media screen and (max-width: 1280px) {
-    right: 80%;
+    right: 88%;
   }
   @media screen and (max-width: 1150px) {
     right: 85%;
   }
   @media screen and (max-width: 1024px) {
-    right: 77%;
+    right: 90%;
   }
   @media screen and (max-width: 680px) {
-    right: 73%;
+    right: 87%;
   }
+  @media screen and (max-width: 400px){
+    right: 80%;
+}
 `;

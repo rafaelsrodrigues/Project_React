@@ -12,8 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/Main" element={<MainPage />} />
-          <Route path="/Search" element={<SearchPage />} />
+          <Route path="/main" element={<MainPage />} />
+          <Route path="/search" element={<SearchPage />} />
         </Routes>
       </BrowserRouter>
     </div>
