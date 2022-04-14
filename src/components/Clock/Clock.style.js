@@ -30,4 +30,5 @@ export const FullDateContainer = styled.p`
     font-family: 'Mark Pro';
     color: ${colorClock};
     margin-top: -3.5vw;
+    margin-right: 2vw;
 `

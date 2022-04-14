@@ -12,6 +12,7 @@ export const LogoHeader = styled.img`
   margin-left: 45px;
   margin-top: 25px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 450px) {
+    margin-left: 3px;
   }
 `;

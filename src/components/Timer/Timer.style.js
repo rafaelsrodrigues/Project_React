@@ -48,7 +48,7 @@ export const FooterResetTimerDiv = styled.div`
     min-width: 80px ;
   }
 `
-export const FooterResetTimerButton = styled.a`
+export const FooterResetTimerButton = styled.button`
   text-decoration: none;
   cursor: pointer;
   font-family: 'Mark Pro';
@@ -58,10 +58,17 @@ export const FooterResetTimerButton = styled.a`
   line-height: 15,21px;
   text-align: center;
   height: 100%;
+  border: none;
   color:#C13216;
   padding:35px;
+  background: #FFFFFF;
   @media screen and (max-width:1024px )
   {
     padding: 45px 0 35px 0 ;
   }
+  @media screen and (max-width: 450px) {
+    padding: 0;
+    padding-top: 21px;
+    padding-bottom: 21px;
+}
   `
