@@ -31,6 +31,8 @@ export const LogoImg = styled.img`
   @media screen and (max-width: 1024px) {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 40px;
   }
   @media screen and (max-width: 325px){}
     margin: 35px auto 0 auto;
@@ -67,7 +69,7 @@ export const ResultContainer = styled.div`
     margin-bottom: 15%;
     width: 481px;
     height: 84px;
-    font-size: 34px;
+    font-size: 28px;
     line-height: 42px;
   }
 `;

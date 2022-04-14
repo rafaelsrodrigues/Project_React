@@ -9,6 +9,7 @@ import {
   LoginTextP,
   LoginTextTitle,
   LogoBody,
+  LogoBodyMobile,
   RightContainer,
 } from "./LoginBody-style";
 
@@ -17,6 +18,7 @@ export default function LoginBody() {
     <div>
       <BodyCointainer>
         <LeftContainer>
+          <LogoBodyMobile src={LogoCompass} />
           <LoginTextContainer>
             <LoginTextTitle>Olá,</LoginTextTitle>
             <LoginTextP>
