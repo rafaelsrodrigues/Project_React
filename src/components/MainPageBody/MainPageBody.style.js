@@ -17,8 +17,8 @@ export const LeftContainer = styled.div`
   width: 35%;
   min-height: 100%;
   display: flex;
-
   @media screen and (max-width: 1024px) {
+    widht:100%
   }
 `;
 export const UolLogoContainer = styled.img`
@@ -41,6 +41,7 @@ export const RightContainer = styled.div`
   @media screen and (max-width: 1024px) {
   }
 `;
+
 
 export const TextContainer = styled.div`
   min-width: 100%;

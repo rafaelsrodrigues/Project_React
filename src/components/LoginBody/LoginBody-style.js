@@ -55,15 +55,37 @@ export const LogoBody = styled.img`
   }
 `;
 
+export const LogoBodyMobile = styled.img`
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    width: 300px;
+    height: 70px;
+    margin: 35px auto 0 auto;
+  }
+  @media screen and (max-width:450px){
+    width: auto;
+   height: 45px;
+   margin: 0;
+   margin-top: 30px;
+  }
+`;
+
 export const LoginTextContainer = styled.div`
 width: 44%;
 display:flex;
 flex-wrap: wrap;
-@media screen and (max-height:820px){
-  padding:45px 0;
-}
+margin-bottom: 10%;
 @media screen and (max-width: 1024px){
   width:80%;
+  flex-direction: column;
+}
+@media screen and (max-width:820px){
+  padding:45px 0;
+}
+@media screen and (max-width:450px)
+padding: 24px 0;
 }
 `;
 
@@ -74,6 +96,9 @@ export const LoginTextTitle = styled.h1`
   font-size: 60px;
   line-height: 76px;
   margin-bottom: 15px;
+  @media screen and (max-width:450px)
+font-size: 54px;
+}
 `;
 
 export const LoginTextP = styled.p`
