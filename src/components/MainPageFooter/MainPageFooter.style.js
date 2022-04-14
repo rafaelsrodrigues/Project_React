@@ -14,6 +14,9 @@ export const FooterContainer = styled.div`
   @media screen and (max-width:1024px){
     justify-content: flex-end;
   }
+  @media screen and (max-width: 450px) {
+    height: 15%;
+  }
 `
 export const FooterText = styled.div`
   display:flex;
@@ -87,7 +90,7 @@ export const FooterSearch = styled.input`
 `
 export const FooterSearchIcon = styled.img`
   position: relative;
-  right: 77%;
+  right: 75%;
   width:20px;
   height: 20px;
   @media screen  and (max-width: 1552px){
@@ -100,11 +103,14 @@ export const FooterSearchIcon = styled.img`
     right: 85%;
   }
   @media screen and (max-width: 1024px){
-    right:77%;
+    right:90%;
   }
   @media screen and (max-width: 680px){
-    right: 73%;
+    right: 82%;
   }
+  @media screen and (max-width: 450px) {
+    right: 72%;
+}
   
 `
 export const FooterResetContainer = styled.div`
@@ -128,33 +134,41 @@ export const ResetWarning  = styled.p`
 `
 
 export const FooterLogoutButtonContainer = styled.div`
-  background-color: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);;
-  width: 128px;
-  height: auto;
-  justify-content: center;
-  display:flex;
-  align-items: center;
-  margin:0;
-  padding:0;
-  @media screen and (max-width: 1024px) {
-    width: 6.8vw ;
-    min-width: 80px ;
-  }
+background-color: #FFFFFF;
+width: 131px;
+height: auto;
+display:flex;
+align-items: center;
+margin:0;
+padding:0;
+@media screen and (max-width:1024px )
+{
+  width: 6.8vw ;
+  min-width: 80px ;
+}
 `
 export const FooterLogoutButton = styled.button`
-  text-decoration: none;
-  padding:40px;
-  font-family: 'Mark Pro';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15,21px;
-  text-align: center;
-  width: 100%;
-  color: #FFFFFF;
-  cursor: pointer;
-  background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);;
-  @media screen and (max-width: 1024px) {
-    padding: 40px 0 ;
-  }
+text-decoration: none;
+cursor: pointer;
+font-family: 'Mark Pro';
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15,21px;
+text-align: center;
+height: 100%;
+width: 100%;
+border: none;
+color:#FFFFFF;
+padding:35px;
+background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);;
+@media screen and (max-width:1024px )
+{
+  padding: 45px 0 35px 0 ;
+}
+@media screen and (max-width:450px) {
+  padding: 0;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
 `

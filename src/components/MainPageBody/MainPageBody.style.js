@@ -7,6 +7,7 @@ export const BodyCointainer = styled.div`
   display: flex;
   margin: 0;
   padding: 0;
+  padding-top: 5%;
   box-sizing: border-box;
 
   @media screen and (max-width: 1024px) {
@@ -18,17 +19,24 @@ export const LeftContainer = styled.div`
   min-height: 100%;
   display: flex;
   @media screen and (max-width: 1024px) {
-    widht:100%
+    widht: 100%;
   }
 `;
 export const UolLogoContainer = styled.img`
   position: fixed;
   width: auto;
   bottom: 0;
-  height: 600px;
+  height: 75%;
   margin-top: auto;
 
+  @media screen and (max-width: 1650px) {
+    height: 60%;
+  }
+  @media screen and (max-width: 1200px) {
+    height: 50%;
+  }
   @media screen and (max-width: 1024px) {
+    height: 75%;
   }
 `;
 
@@ -39,9 +47,9 @@ export const RightContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 1024px) {
+      display: none;
   }
 `;
-
 
 export const TextContainer = styled.div`
   min-width: 100%;
@@ -51,6 +59,9 @@ export const TextContainer = styled.div`
   align-items: end;
   margin-right: 109px;
   top: 50%;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const TextContainerSmallTitle = styled.h2`
@@ -87,4 +98,6 @@ export const TextContainerTitle = styled.h1`
   font-size: 64px;
   line-height: 81px;
   text-align: right;
+  @media screen and (max-width: 1280px) {
+    height: auto;
 `;
