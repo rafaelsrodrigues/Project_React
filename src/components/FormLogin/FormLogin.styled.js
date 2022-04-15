@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const LoginForm = styled.form`
+  width:100%;
+`
+
 export const LoginInput = styled.input`
   width: 100%;
   margin: 5px auto;
@@ -136,8 +140,13 @@ export const LoginErrorMessageContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  @media screen and (max-width: 1024px) {
-    background-color: transparent;
-  }
 `;
+export const ErrorMessageText = styled.p`
+  font-family: Mark Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #E9B425;
+`

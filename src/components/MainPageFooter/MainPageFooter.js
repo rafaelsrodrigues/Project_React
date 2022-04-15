@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import iconUser from "../../assets/icons/iconUser.png"
 import {
   FooterContainer,
@@ -16,19 +16,26 @@ import {
 
 import Timer from "../Timer/Timer"
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Providers/auth";
+import ListDevelopers from "../Api.request.js/api.request";
 
 export const MainPageFooter = () => {
+  const navigate = useNavigate();
+  const { logout } = useContext(AuthContext);
   const [name, setName] = useState("");
 
   function handleChange(e) {
     setName(e.target.value);
+    ListDevelopers(name)
   }
 
-  const returnPage = useNavigate();
+  const returnPage = () =>{
+    logout();
+  } 
 
   function onKeyEnter(e) {
     if (e.keyCode === 13) {
-      returnPage("/");
+      navigate("/search");
     }
   }
 
