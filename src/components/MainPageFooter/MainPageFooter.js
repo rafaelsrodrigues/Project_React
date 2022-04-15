@@ -17,14 +17,16 @@ import {
 import Timer from "../Timer/Timer"
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/auth";
+import ListDevelopers from "../Api.request.js/api.request";
 
 export const MainPageFooter = () => {
-
+  const navigate = useNavigate();
   const { logout } = useContext(AuthContext);
   const [name, setName] = useState("");
 
   function handleChange(e) {
     setName(e.target.value);
+    ListDevelopers(name)
   }
 
   const returnPage = () =>{
@@ -33,7 +35,7 @@ export const MainPageFooter = () => {
 
   function onKeyEnter(e) {
     if (e.keyCode === 13) {
-      returnPage("/search");
+      navigate("/search");
     }
   }
 

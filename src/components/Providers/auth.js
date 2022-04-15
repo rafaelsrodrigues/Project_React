@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import devList from "../../assets/developer-list/people.json"
 
 export const AuthContext = createContext();
@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const list=devList.logins;
   const [auxArray,setAuxArray] = useState([]);
-  const [aux,setAux] = useState(''); 
+  const [filteredUser,setFilteredUser] = useState(''); 
 
 
 
@@ -30,17 +30,15 @@ export const AuthProvider = ({ children }) => {
     setAuxArray(list.filter((person) => {  
       if( person.login === loggedUser.name &&
       person.password == loggedUser.password){
-        setAux(person.local);
-        console.log(aux);
+        setFilteredUser(person.local);
       return person
       }
     }))
 
-    
-    
     if(auxArray.length > 0){
       navigate("/main");
       localStorage.setItem("user", JSON.stringify(loggedUser))
+      coordinates();
     }
   };
 
@@ -51,9 +49,16 @@ export const AuthProvider = ({ children }) => {
     navigate("/");
   };
 
+  const coordinates = () =>{
+    const setCoordenates = filteredUser.split(", ")
+    const long = setCoordenates[0]
+    const lat = setCoordenates[1]
+    console.log(lat,long)
+  }
+
   return (
     <AuthContext.Provider
-      value={{ authenticated: !!user, user,loading, login, logout }}>
+      value={{ authenticated: !!user, user,loading, login, logout, coordinates }}>
       {children}
     </AuthContext.Provider>
   );

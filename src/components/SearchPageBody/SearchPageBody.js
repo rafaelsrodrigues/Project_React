@@ -16,13 +16,15 @@ import {
 import LogoCompass from "../../assets/img/LogoCompass.png";
 import iconUser from "../../assets/icons/iconUser.png";
 import { useNavigate } from "react-router-dom";
+import ListDevelopers from "../Api.request.js/api.request";
+import SearchPageResponse from "../Api.response/Api.response";
 
 export default function SearchPage() {
   const [search, setSearch] = useState("");
 
   function handleChange(e) {
     setSearch(e.target.value);
-    console.log(search)
+    ListDevelopers(search)
   }
 
   const Exit = useNavigate();
@@ -32,7 +34,7 @@ export default function SearchPage() {
       <LogoContainer>
         <LogoImg src={LogoCompass}></LogoImg>
       </LogoContainer>
-      <ResultContainer>O usuário buscado não existe, por favor tente novamente!</ResultContainer>
+      <ResultContainer><SearchPageResponse /></ResultContainer>
       <InputContainer>
         <SearchInputContainer>
           <SearchInput
@@ -47,7 +49,7 @@ export default function SearchPage() {
           <ButtonSearchStyle>Buscar</ButtonSearchStyle>
         </ButtonContainer>
         <ButtonContainer>
-          <ButtonExitStyle onClick={()=>{Exit('/');}}>Sair</ButtonExitStyle>
+          <ButtonExitStyle onClick={()=>{Exit('/main');}}>Sair</ButtonExitStyle>
         </ButtonContainer>
     </SearchContainer>
   );

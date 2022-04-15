@@ -22,8 +22,8 @@ if(loading){return<div>Carregando...</div>}
         <AuthProvider>
         <Routes>
             <Route path="/" element={<LoginPage />} />
-            <Route path="/main" element={<MainPage />} />
-            <Route path="/search" element={<SearchPage />} />
+            <Route path="/main" element={<Private><MainPage /></Private>} />
+            <Route path="/search" element={<Private><SearchPage /></Private>} />
         </Routes>
         </AuthProvider> 
     </BrowserRouter>

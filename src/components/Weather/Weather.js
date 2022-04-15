@@ -12,7 +12,7 @@ import Cloud from '../../assets/icons/cloud.svg';
 import { urlWeather, urlState } from './WeatherUser';
 
 
-export const Weather = () => {
+export const Weather = () => {  
     const [weather, setWeather] = useState({
         city: '--',
         state: '--',
